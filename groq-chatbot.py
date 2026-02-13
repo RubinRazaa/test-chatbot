@@ -12,7 +12,9 @@ st.title("Chatbot")
 st.subheader("Developed by Mohammed Rubin Raza")
 
 if "chat_history" not in st.session_state:
-    st.session_state.chat_history = []
+    st.session_state.chat_history = [
+        AIMessage(content="Hello! This is a chatbot developed by Mohammed Rubin Raza using LangChain and Llama 3.3. How can I help you today?")
+    ]
 
 for message in st.session_state.chat_history:
     if isinstance(message, HumanMessage):
